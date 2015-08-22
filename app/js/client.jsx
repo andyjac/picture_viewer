@@ -1,6 +1,7 @@
 var React = require('react');
 var request = require('superagent');
 var PHOTO_URL = 'https://appsheettest1.azurewebsites.net/sample/posts';
+var PhotoList = require('./components/photo_list.jsx');
 
 var App = React.createClass({
   getInitialState: function() {
@@ -24,11 +25,9 @@ var App = React.createClass({
   },
 
   render: function() {
-    console.log(this.state.photos);
-
     return (
       <main className="main">
-        <h1>Hello World!</h1>
+        <PhotoList photos={this.state.photos}/>
       </main>
     );
   }
