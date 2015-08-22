@@ -41,6 +41,9 @@ gulp.task('client', ['lint:client'], function() {
   var html = gulp.src('./app/**/*.html')
       .pipe(gulp.dest('./build/'));
 
+  var css = gulp.src('./app/style.css')
+      .pipe(gulp.dest('./build/'));
+
   var build = gulp.src('./app/js/client.jsx')
       .pipe(webpack({
         module: {
@@ -52,7 +55,7 @@ gulp.task('client', ['lint:client'], function() {
       }))
       .pipe(gulp.dest('./build/'));
 
-  return merge(html, build);
+  return merge(html, css, build);
 });
 
 gulp.task('watch', function() {
