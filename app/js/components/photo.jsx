@@ -2,7 +2,6 @@ var React = require('react');
 
 var Photo = React.createClass({
   handleLoad: function() {
-    console.log('load');
     this.props.load();
   },
 
