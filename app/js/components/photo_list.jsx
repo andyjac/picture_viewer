@@ -34,7 +34,9 @@ var PhotoList = React.createClass({
 
     return (
       <section className="photo-list-container">
-        <h1 className={loaderClass}>Loading...</h1>
+        <aside className={loaderClass}>
+          <img src="preloader.gif"/>
+        </aside>
         <ul className={listClass}>
           {this.renderPhotos()}
         </ul>
