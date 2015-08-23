@@ -2,12 +2,12 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jsxhint = require('jshint-jsx').JSXHINT;
 var plumber = require('gulp-plumber');
-var nodemon = require('gulp-nodemon')
+var nodemon = require('gulp-nodemon');
 var merge = require('merge-stream');
 var webpack = require('gulp-webpack');
 
 gulp.task('lint:server', function() {
-  return gulp.src('./server.js')
+  return gulp.src(['./server.js', './gulpfile.js'])
     .pipe(plumber())
     .pipe(jshint({
       node: true
@@ -16,7 +16,7 @@ gulp.task('lint:server', function() {
     .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('nodemon', function() {
+gulp.task('nodemon', ['lint:server'], function() {
   return nodemon({
     script: './server.js',
     ignore: ['./app/**/']
@@ -34,7 +34,7 @@ gulp.task('lint:client', function() {
       linter: jsxhint
     }))
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'))
+    .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('client', ['lint:client'], function() {
@@ -63,7 +63,7 @@ gulp.task('client', ['lint:client'], function() {
 
 gulp.task('watch', function() {
   gulp.watch('./server.js', ['lint:server']);
-  gulp.watch('./app/**/*', ['client'])
+  gulp.watch('./app/**/*', ['client']);
 });
 
 gulp.task('default', ['client', 'watch']);
