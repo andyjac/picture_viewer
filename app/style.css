@@ -190,4 +190,51 @@ p {
     height: 4em;
     width: auto;
   }
+
+  .photo {
+    margin: 20px 5px;
+  }
+
+  .caption {
+    position: static;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+
+  .caption-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: static;
+    transform: none;
+    opacity: 1;
+    height: 100%;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+
+  .photo:hover .caption {
+    -webkit--transform: none;
+    -moz-transform: none;
+    transform: none;
+  }
+
+  .photo:hover .image {
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+
+  .photo:hover .caption-container {
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
 }
