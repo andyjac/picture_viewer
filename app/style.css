@@ -134,32 +134,60 @@ p {
 
 @media (max-width: 1175px) {
   .photo-list {
+    padding: 0 2em;
+
     -webkit-column-count: 4;
     -moz-column-count: 4;
     column-count: 4;
+  }
+
+  .loader img {
+    height: 2.5em;
+    width: auto;
   }
 }
 
 @media (max-width: 925px) {
   .photo-list {
+    padding: 0 1.5em;
+
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+  }
+
+  .loader img {
+    height: 3em;
+    width: auto;
   }
 }
 
 @media (max-width: 700px) {
   .photo-list {
+    padding: 0 1em;
+
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
+  }
+
+  .loader img {
+    height: 3.5em;
+    width: auto;
   }
 }
 
 @media (max-width: 500px) {
   .photo-list {
+    padding: 0 0.5em;
+
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
+  }
+
+  .loader img {
+    height: 4em;
+    width: auto;
   }
 }
