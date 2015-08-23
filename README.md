@@ -1,3 +1,3 @@
 # Picture Viewer
 
-### A simple picture displayer
+### A simple picture display app
