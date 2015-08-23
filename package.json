@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "gulp client"
+    "postinstall": "node_modules/gulp/bin/gulp client"
   },
   "author": "andyjac",
   "license": "MIT",
