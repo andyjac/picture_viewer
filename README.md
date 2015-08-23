@@ -1,2 +1,3 @@
-# picture_viewer
-A simple picture displayer
+# Picture Viewer
+
+### A simple picture displayer
