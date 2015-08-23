@@ -11,8 +11,10 @@ var Photo = React.createClass({
 
     return (
       <li className="photo">
-        <img onLoad={this.handleLoad} className="image" src={photoSrc} alt={caption}/>
-        <p className="caption">{caption}</p>
+        <img className="image" onLoad={this.handleLoad} src={photoSrc} alt={caption}/>
+        <div className="caption-container">
+          <p className="caption">{caption}</p>
+        </div>
       </li>
     );
   }
