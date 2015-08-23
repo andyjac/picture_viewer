@@ -17,7 +17,7 @@
 }
 
 .photo-list {
-  padding: 0 2em;
+  padding: 0 3em;
   list-style-type: none;
   line-height: 0;
 
@@ -42,6 +42,14 @@
 
 .loader {
   text-align: center;
+  height: 2em;
+  width: auto;
+  padding-top: 1em;
+}
+
+.loader img {
+  height: 2em;
+  width: auto;
 }
 
 p {
