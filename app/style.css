@@ -72,9 +72,18 @@ p {
 
 .caption {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50%;
   color: white;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.photo:hover .caption {
+  -webkit--transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .photo {
