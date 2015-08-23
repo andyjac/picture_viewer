@@ -16,9 +16,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
-    "superagent": "^1.3.0"
-  },
-  "devDependencies": {
+    "superagent": "^1.3.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
     "gulp-nodemon": "^2.0.4",
