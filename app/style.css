@@ -96,7 +96,7 @@ p {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .photo-list {
     -webkit-column-count: 2;
     -moz-column-count: 2;
