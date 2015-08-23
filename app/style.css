@@ -1,19 +1,23 @@
+p {
+  margin: 0;
+}
+
 .visible {
   visibility: visible;
   opacity: 1;
 
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
 
-  -webkit-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 .photo-list {
@@ -52,9 +56,6 @@
   width: auto;
 }
 
-p {
-  margin: 0;
-}
 
 .caption-container {
   position: absolute;
@@ -63,18 +64,55 @@ p {
   transform: translateY(-50%);
   opacity: 0;
   height: 100%;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .caption {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: white;
+}
+
+.photo {
+  overflow: hidden;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -o-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  -webkit-backface-visibility: hidden;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.photo:hover .image {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .photo:hover .caption-container {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.75);
-  color: white;
+
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .photo .image {
